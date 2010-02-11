@@ -1,0 +1,20 @@
+<!-- 
+
+Here's an example target definiton in Ant.
+
+Put it somewhere in your build, make sure all development and build
+environments have Python installed, and enjoy!
+
+-->
+
+<target name="detect.encodings">
+    <exec executable="python" failonerror="true">
+        <arg value="${basedir}/encoding-detector/encoding-detector.py"/>
+
+        <!-- Args below get recursively checked for encoding issues -->
+        <arg value="${basedir}/src"/>
+        <arg value="${basedir}/web/WEB-INF"/>
+        <arg value="${basedir}/web/js"/>
+        <arg value="${basedir}/web/css"/>
+    </exec>
+</target>
