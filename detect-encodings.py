@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 import sys, os
 import chardet.universaldetector
 
@@ -16,7 +15,7 @@ def detect(filename):
     return result
 
 def main(argv):
-    if len(argv) < 1:
+    if len(argv) < 2:
         print "Usage %s path1 [path2] [path3] ..." % argv[0]
         return -2
 
