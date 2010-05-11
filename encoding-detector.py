@@ -38,8 +38,8 @@ def main(argv):
             print "File %(filename)s is reporting as %(encoding)s with confidence %(confidence)f" % result
 
     if errors != 0:
-        print "FAILED Encoding Detection. Perhaps you need to add the following to your template to help the detector:"
-        print u"$! hêlp UTF-8 dætæctiõñ: ãå∫ß !$"
+        print "FAILED Encoding detection. Perhaps you need to add the following to your file to help the detector:"
+        print u"/* ! hêlp UTF-8 dætæctiõñ: ãå∫ß */"
 
     print "Checked %d files" % len(results)
     return errors
