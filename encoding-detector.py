@@ -35,10 +35,13 @@ def main(argv):
     for result in results:
         if (not result['encoding'] in ('ascii', 'utf-8')) or result['confidence'] < 0.85: 
             errors = -1
-            print "File %(filename)s is reporting as %(encoding)s with confidence %(confidence)f" % result
+            if result['encoding'] is None:
+                print "Could not identify encoding of %(filename)s: confidence %(confidence)f" % result
+            else:
+                print "File %(filename)s is reporting as %(encoding)s with confidence %(confidence)f" % result
 
     if errors != 0:
-        print "FAILED Encoding detection. Perhaps you need to add the following to your file to help the detector:"
+        print "FAILED Encoding detection. Perhaps you need to add the following to the files listed above to help the detector:"
         print u"/* ! hêlp UTF-8 dætæctiõñ: ãå∫ß */"
 
     print "Checked %d files" % len(results)
