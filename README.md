@@ -1,4 +1,6 @@
-ENCODING DETECTOR
+# Encoding Detector
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 Detect encodings recursively over files in your project and kill
 those nasty non-UTF files before they rob you of tiresome hours
@@ -10,7 +12,7 @@ enough to get things going. Contributions are most welcome and, if
 someone wants to comment on my dated Python skills, feel free to
 do so though the medium of patches ;)
 
-LICENSE (LGPL)
+# License (LGPL)
 
 This library is free software; you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as
